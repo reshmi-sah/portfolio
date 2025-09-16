@@ -16,3 +16,21 @@ body::-webkit-scrollbar {
 .scrollbar-hide::-webkit-scrollbar {
   display: none; 
 }
+
+@media (min-width: 1280px) and (max-width: 1350px) {
+  .btn-fix {
+     justify-content: start;
+  }
+}
+
+/* Add rotation animation */
+.fade-in-scale {
+  opacity: 0;
+  transform: scale(0) rotate(-15deg); /* start slightly rotated */
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.fade-in-scale.show {
+  opacity: 1;
+  transform: scale(1) rotate(0deg); /* rotate to normal */
+}

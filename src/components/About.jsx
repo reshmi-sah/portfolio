@@ -1,37 +1,11 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Animation from "../components/Animation";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const aboutRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      aboutRef.current,
-      {
-        y: -60,
-        opacity: 0,
-         rotate: -45,
-      },
-      {
-        y:0,
-        opacity: 1,
-        rotate: 0,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: "top 50%",
-          toggleActions: "restart none restart none", 
-        },
-      }
-    );
-  }, []);
 
   return (
-  <section id="about" className="min-h-screen">
+  <section id="about" className="">
       <div className="sm:mt-24 mt-10 sm:mb-14 mb-10 relative">
       {/* background blobs */}
       <div className="absolute left-[35%] -top-16 w-96 h-[200px] animate-pulse bg-gradient-to-l from-orange-950 to-pink-950 opacity-30 blur-3xl"></div>
@@ -74,15 +48,16 @@ const About = () => {
           />
         </div>
 
+<Animation variant="fade">
         <div
           className="right w-full flex-1 max-w-xl md:text-left space-y-4 sm:p-0 pt-5"
-          ref={aboutRef}
+          // ref={aboutRef}
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-[600] tracking-wider">
             Hello! My name is Reshmi Kumari
           </h1>
           <p className="text-xl sm:text-base md:text-lg lg:text-[22px] text-white leading-6 sm:leading-9">
-            I am a Frontend Developer Intern passionate about creating modern,
+            I am a Frontend Developer passionate about creating modern,
             responsive, and accessible web applications. I enjoy working with
             React, Tailwind CSS, and JavaScript to craft smooth user
             experiences. Currently, I’m learning advanced animation techniques
@@ -92,6 +67,7 @@ const About = () => {
             innovations.
           </p>
         </div>
+        </Animation>
       </div>
     </div>
   </section>
@@ -99,3 +75,4 @@ const About = () => {
 };
 
 export default About;
+

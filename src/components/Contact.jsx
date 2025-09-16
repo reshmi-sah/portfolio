@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import Animation from "../components/Animation";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -28,8 +29,9 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <div className="flex items-center justify-center min-h-screen bg-black">
-        <div className="relative w-full max-w-md rounded-2xl p-5 bg-black/80 backdrop-blur-xl shadow-[0_0_25px_rgba(168,85,247,0.7),inset_0_0_25px_rgba(168,85,247,0.5)]">
+      <Animation threshold={0.2} variant="fade">
+      <div className="flex items-center justify-center sm:mt-32 sm:mb-32 mt-20 mb-20 bg-black">
+        <div className="relative w-full max-w-md rounded-2xl p-5 shadow-[0_0_25px_rgba(168,85,247,0.7),inset_0_0_25px_rgba(168,85,247,0.5)]">
           <div className="rounded-2xl bg-black/80 backdrop-blur-xl sm:p-8 p-2">
             <h2 className="text-3xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-500 [text-shadow:0_0_15px_rgba(236,72,153,0.8)]">
               Contact Me
@@ -48,6 +50,7 @@ const Contact = () => {
                 name="name"
                 placeholder="Your Name"
                 required
+                autoComplete="off"
                 className="w-full p-3 rounded-full bg-transparent border border-gray-400/50 text-white focus:outline-none focus:ring-2 focus:ring-pink-500 placeholder-gray-400"
               />
 
@@ -56,6 +59,7 @@ const Contact = () => {
                 name="email"
                 placeholder="Your Email"
                 required
+                autoComplete="off"
                 className="w-full p-3 rounded-full bg-transparent border border-gray-400/50 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder-gray-400"
               />
 
@@ -81,6 +85,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      </Animation>
     </section>
   );
 };

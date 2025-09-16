@@ -1,31 +1,11 @@
 import React, { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
 import { motion} from "framer-motion";
 import { Link } from "react-scroll";
 import link from '../assets/linkedin.png'
 import github from '../assets/social1.png'
-
+import Animation from "../components/Animation";
 
 const Home = () => {
-
-  const headref = useRef(null);
-
-  useEffect(() =>{
-    gsap.fromTo(
-      headref.current,
-      {
-        opacity: 0,
-        scale: 0,
-      },
-      {
-        opacity: 1,
-        scale:1,
-        rotate: 0,
-        duration: 1.5,
-      ease: "back.out(1.4)"
-      }
-    )
-  }, []);
 
   return (
    <>
@@ -35,18 +15,17 @@ const Home = () => {
        <div className='flex flex-col md:flex-row relative justify-between items-center gap-4 '>
       <div className='absolute -z-10 -top-20 left-6 bg-gradient-to-r from-pink-700 to-sky-700 blur-3xl md:h-[30rem] md:w-96 h-[20rem] w-60 opacity-30 rounded-full '></div>
         <div className='pt-2 flex flex-col max-w-xl lg:space-y-10 md:space-y-6 space-y-3 '>
+          <Animation variant="fade">
             <h1
-            ref={headref}
-             className='text-4xl md:text-5xl lg:text-7xl font-[600] leading-tight text-white'>
-               <span className='relative'>
-                 Welcome to my 
-                 <span className='absolute left-0 bottom-0 w-full h-4 lg:h-6 md:h-4 bg-pink-400 -z-10'></span>
+             className=' font-[600] leading-tight text-white'>
+               <span className='relative text-[2rem] md:text-[2.2rem] lg:text-6xl'>
+                 Hello, I’m Reshmi a,
                </span>
                 <br /> 
-                <span className=' bg-gradient-to-r form bg-pink-900 to-purple-700 bg-clip-text text-transparent'>
-                Portfolio!</span>
+                <span className='text-[1.8rem]  md:text-[2.2rem] lg:text-5xl bg-gradient-to-r form bg-pink-900 to-purple-700 bg-clip-text text-transparent'>
+               Frontend Developer</span>
                 </h1>
-
+</Animation>
                   <div className='flex items-center gap-5 '>
                 <h1 className='lg:text-3xl md:text-2xl text-[20px] '>connect with me:</h1>
                     <div className='flex items-center gap-5'>
@@ -83,8 +62,8 @@ const Home = () => {
                  <div className="flex items-center gap-8">
   <Link
   to="contact"
-  smooth={"easeInOutQuart"}   // 👈 easing function
-  duration={1200}             // 👈 increase time for slower scroll
+  smooth={"easeInOutQuart"}   
+  duration={1200}             
   offset={-80}
 >
   <motion.button
@@ -102,7 +81,7 @@ const Home = () => {
 
 
   <motion.a 
-  href="/reshmi-resume.pdf"   
+  href="/reshmi-sah.pdf"   
   target="_blank" 
   rel="noopener noreferrer"
     whileHover={{ scale: 1.05 }}
@@ -121,9 +100,20 @@ const Home = () => {
 
         <div className=' relative sm:mt-0 mt-5'>
                 <div className="absolute inset-0 rounded-full -z-10 blur-3xl opacity-70 animate-pulse  bg-gradient-to-r from-pink-500 via-purple-600 to-cyan-500"></div>
-            <img src="./download.jpeg" alt="image"
-             className='lg:h-96 lg:w-96 md:h-72 md:w-72 h-64 w-64 object-cover rounded-full z-10 border-[3px] border-gray-800 '
-            />
+             <div
+          className=" flex-shrink-0 
+                       w-48 h-48     
+                       sm:w-60 sm:h-60  
+                       md:w-72 md:h-72  
+                       lg:w-80 lg:h-80  
+                       xl:w-96 xl:h-96"
+        >
+          <img
+            src="./download.jpeg"
+            alt="post"
+            className="h-full w-full object-cover rounded-full border-[3px] border-gray-700 "
+          />
+        </div>
         </div>
      </div>
     </section>
@@ -133,3 +123,5 @@ const Home = () => {
 }
 
 export default Home
+
+

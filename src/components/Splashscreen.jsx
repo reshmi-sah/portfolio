@@ -1,27 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import {gsap} from 'gsap';
+import Animation from "../components/Animation";
+
 
 export default function SplashScreen() {
-
-    const logoRef = useRef(null);
-
-    useEffect(() =>{
-        gsap.fromTo(
-            logoRef.current,
-            {
-                opacity:0,
-                scale:0,
-                rotate: -180
-            },
-            {
-                opacity: 1,
-                scale: 1,
-                rotate: 0,
-                duration: 1.5,
-                ease: "back.out(1.7)"
-            }
-        );
-    }, []);
 
   return (
    <>
@@ -40,13 +21,14 @@ export default function SplashScreen() {
         ></div>
       ))}
      <div className="flex items-center justify-center min-h-screen">
+      <Animation variant="scroll">
         <div 
-        ref={logoRef}
          className="flex items-center justify-center h-[80px] w-[80px]  sm:h-[130px] sm:w-[130px] p-1 rounded-full bg-gradient-to-t from-red-900 via-pink-800 to-orange-800  ">
              <img src="./portlogo.jpg" 
              alt="logo"
              className="rounded-full h-full w-full" />
         </div>
+        </Animation>
      </div>
    </div>
    </>

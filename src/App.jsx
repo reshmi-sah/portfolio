@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import SplashScreen from "./components/Splashscreen";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -7,12 +8,13 @@ import Skills from "./components/Skills";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Animation from "./components/Animation";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1500); // 1.5 sec
+    const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,13 +23,13 @@ export default function App() {
   return (
     <div className="text-white">
       <Navbar />
-      <div className=" sm:mx-[4.5rem] mx-4">
-         <div className="mt-20 sm:mt-32"><Home /></div>
-      
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
+     <Animation />
+      <div className="sm:mx-[4.5rem] mx-4 mt-20 sm:mt-32">
+        <Home />
+        <About />
+        <Skills />
+        <Project />
+        <Contact />
       </div>
       <Footer />
     </div>

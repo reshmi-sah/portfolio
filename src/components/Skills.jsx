@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Animation from "../components/Animation";
 
 import html from "../assets/html.png";
 import css from "../assets/css.png";
@@ -34,7 +35,8 @@ const Skills = () => {
         Skills
       </h2>
 
-      <div className="flex flex-wrap items-center justify-center sm:gap-20 gap-10">
+   
+      <div className="flex flex-wrap items-center justify-center sm:gap-15 md:gap-15 gap-10">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
@@ -46,15 +48,17 @@ const Skills = () => {
           ease: "easeOut",
         }}
           whileHover={{ scale: 1.05, y: -1 }} 
-            className="h-40 w-40 p-3 flex flex-col items-center justify-center bg-black/80 backdrop-blur-md rounded-2xl shadow-[inset_0_0_25px_rgba(168,85,247,0.7)]"
+            className="h-36 w-36 p-3 flex flex-col items-center justify-center bg-black/80 backdrop-blur-md rounded-2xl shadow-[inset_0_0_25px_rgba(168,85,247,0.7)]"
           >
-            <div className="h-20 w-20 flex items-center justify-center">
+             <Animation threshold={0.4} variant="fade">
+            <div className="h-16 w-16 flex items-center justify-center">
               <img
                 src={skill.logo}
                 alt={skill.name}
                 className="h-full w-full object-cover"
               />
             </div>
+              </Animation>
             <p className="text-xl mt-2">{skill.name}</p>
           </motion.div>
         ))}
