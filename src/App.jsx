@@ -9,6 +9,7 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Animation from "./components/Animation";
+import Experience from "./components/Experience";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,7 @@ export default function App() {
         <Home />
         <About />
         <Skills />
+        <Experience />
         <Project />
         <Contact />
       </div>

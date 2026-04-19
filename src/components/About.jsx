@@ -8,11 +8,10 @@ const About = () => {
   <section id="about" className="">
       <div className="sm:mt-24 mt-10 sm:mb-14 mb-10 relative">
       {/* background blobs */}
-      <div className="absolute left-[35%] -top-16 w-96 h-[200px] animate-pulse bg-gradient-to-l from-orange-950 to-pink-950 opacity-30 blur-3xl"></div>
       {[
-        "top-10 left-10",
-        "top-[20rem] -left-14",
-        "bottom-[20rem] -right-14",
+        // "top-10 left-10",
+        // "top-[20rem] -left-14",
+        // "bottom-[20rem] -right-14",
         "bottom-0 right-32",
         "-bottom-7 left-[25rem]",
         "top-[50%] left-[50%]",
