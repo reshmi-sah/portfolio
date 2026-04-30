@@ -4,12 +4,21 @@ import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
 import project5 from "../assets/project5.png";
+import project6 from "../assets/project6.png";
 import { IoCaretForwardOutline } from "react-icons/io5";
 import { IoCaretBack } from "react-icons/io5";
 
 const projects = [
    {
     id: 1,
+    title: "Design",
+    skill: "React.js, Tailwind CSS",
+    img: project6,
+    github: "https://github.com/reshmi-sah/Design",
+    live: "https://ddeessiiggnn.netlify.app/",
+  },
+  {
+    id: 2,
     title: "Custom-products",
     skill: "React.js, Tailwind CSS",
     img: project4,
@@ -17,7 +26,7 @@ const projects = [
     live: "https://custom-products.netlify.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Dashboard",
     skill: "React.js, Tailwind CSS",
     img: project5,
@@ -25,7 +34,7 @@ const projects = [
     live: "https://animated-manatee.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Social media website (Bebo)",
     skill: "React.js, Tailwind CSS",
     img: project1,
@@ -33,7 +42,7 @@ const projects = [
     live: "https://meet-social.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "E-Commerce (macy)",
     skill: "React.js, Tailwind CSS",
     img: project2,
@@ -41,7 +50,7 @@ const projects = [
     live: "https://shop-with-macy.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather App",
     skill: "React.js, API",
     img: project3,
