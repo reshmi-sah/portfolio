@@ -5,13 +5,24 @@ import Animation from "../components/Animation";
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import js from "../assets/js.png";
-import reactLogo from "../assets/atom.png";
+import reactLogo from "../assets/science.png";
 import tailwind from "../assets/porttail.png";
 import bootstrap from "../assets/bootstrap.png";
 import git from "../assets/code-branch.png";
 import github from "../assets/social1.png";
 import respon from "../assets/responsive.png";
 import vite from "../assets/portvite.png";
+import meterial from '../assets/mui.png';
+import Redux from '../assets/atom.png'
+import Context from '../assets/copy-testing.png'
+import Router from '../assets/wireless.png'
+import Motion from '../assets/motion.png'
+import Axios from '../assets/integration.png'
+import Figma from '../assets/figma.png'
+import Vercel from '../assets/keyframe.png'
+import Netlify from '../assets/netlify.png'
+import code from '../assets/portvs.png'
+
 
 const skills = [
   { name: "HTML", logo: html },
@@ -20,10 +31,20 @@ const skills = [
   { name: "React", logo: reactLogo },
   { name: "Tailwind", logo: tailwind },
   { name: "Bootstrap", logo: bootstrap },
+  { name: "Material UI", logo: meterial },
+  { name: "Redux Toolkit", logo: Redux },
+  { name: "Context API", logo: Context },
+  { name: "React Router", logo: Router },
+  { name: "Framer Motion", logo: Motion },
+  { name: "Axios", logo: Axios },
+    { name: "Figma", logo: Figma },
+  { name: "Vercel", logo: Vercel },
+  { name: "Netlify", logo: Netlify },
   { name: "Git", logo: git },
   { name: "GitHub", logo: github },
   { name: "Responsive", logo: respon },
   { name: "Vite", logo: vite },
+  { name: "VS Code", logo: code },
 ];
 
 const Skills = () => {
@@ -59,7 +80,7 @@ const Skills = () => {
               />
             </div>
               </Animation>
-            <p className="text-xl mt-2">{skill.name}</p>
+            <p className="text-[1rem] mt-2">{skill.name}</p>
           </motion.div>
         ))}
       </div>

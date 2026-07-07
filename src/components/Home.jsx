@@ -73,7 +73,7 @@ const Home = () => {
       bg-gradient-to-r from-pink-800 via-purple-800 to-cyan-800
       bg-[length:200%_100%] bg-left
       hover:bg-right
-      transition-all duration-700 ease-in-out"
+      transition-all duration-700 ease-in-out cursor-pointer"
   >
     Hire Me
   </motion.button>

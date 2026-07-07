@@ -38,11 +38,11 @@ const Contact = () => {
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* 🔑 Required: Web3Forms Access Key */}
+              
               <input
                 type="hidden"
                 name="access_key"
-                value="9613b1b1-fcb8-4fb8-9d1f-4d6e37ec0928" // replace with your Web3Forms access key
+                value="9613b1b1-fcb8-4fb8-9d1f-4d6e37ec0928" 
               />
 
               <input

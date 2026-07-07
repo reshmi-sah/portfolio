@@ -26,11 +26,11 @@ body::-webkit-scrollbar {
 /* Add rotation animation */
 .fade-in-scale {
   opacity: 0;
-  transform: scale(0) rotate(-15deg); /* start slightly rotated */
+  transform: scale(0) rotate(-15deg); 
   transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 .fade-in-scale.show {
   opacity: 1;
-  transform: scale(1) rotate(0deg); /* rotate to normal */
+  transform: scale(1) rotate(0deg); 
 }
